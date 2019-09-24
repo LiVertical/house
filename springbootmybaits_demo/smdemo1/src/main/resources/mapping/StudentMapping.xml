@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangli.mapper.StudentMapper">
+
+    <resultMap id="BaseResultMap" type="Student">
+        <result column="sid" jdbcType="INTEGER" property="sid" />
+        <result column="sname" jdbcType="VARCHAR" property="sname" />
+        <result column="sage" jdbcType="INTEGER" property="sage" />
+        <result column="ssex" jdbcType="VARCHAR" property="ssex" />
+    </resultMap>
+
+    <select id="queryStudent" resultType="Student">
+        select * from student where sid = #{id}
+    </select>
+
+</mapper>
